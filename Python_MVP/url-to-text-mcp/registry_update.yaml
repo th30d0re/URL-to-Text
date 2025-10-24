@@ -1,0 +1,30 @@
+# Registry Update Configuration
+# 
+# INSTRUCTIONS:
+# 1. Open your existing ~/.docker/mcp/registry.yaml file
+# 2. Find the "registry:" key (it should already exist)
+# 3. Add the "url-to-text:" entry under the "registry:" key
+# 4. Make sure the indentation matches the existing entries
+# 5. Save the file
+#
+# IMPORTANT: The entry must be added under the existing "registry:" key,
+# not at the root level of the YAML file.
+
+registry:
+  # ... your existing servers ...
+  
+  # Add this entry to your existing registry.yaml file:
+  url-to-text:
+    ref: ""
+    # This entry references the custom.yaml catalog file
+    # Make sure custom.yaml is properly configured in ~/.docker/mcp/catalogs/
+
+# VALIDATION:
+# After adding the entry, verify your registry.yaml file:
+# 1. Has proper YAML indentation (2 spaces per level)
+# 2. Contains the "url-to-text:" entry under "registry:"
+# 3. Maintains the existing structure of your file
+# 4. Can be parsed without YAML syntax errors
+#
+# You can validate YAML syntax using online YAML validators or:
+# python -c "import yaml; yaml.safe_load(open('~/.docker/mcp/registry.yaml'))"

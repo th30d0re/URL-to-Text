@@ -1,0 +1,36 @@
+version: 2
+name: custom
+displayName: Custom MCP Servers
+
+registry:
+  url-to-text:
+    description: "Convert video URLs to text transcriptions using Whisper AI"
+    title: "URL to Text Converter"
+    type: server
+    dateAdded: "2025-09-26T00:00:00Z"
+    image: url-to-text-mcp-server:latest
+    ref: ""
+    tools:
+      - name: transcribe_video_url
+      - name: get_video_info
+      - name: validate_video_url
+      - name: estimate_processing_time
+      - name: list_available_models
+    secrets:
+      - name: OPENAI_API_KEY
+        env: OPENAI_API_KEY
+        example: "sk-proj-..."
+      - name: TRANSCRIPTION_MODE
+        env: TRANSCRIPTION_MODE
+        example: "online"
+      - name: OFFLINE_MODEL_NAME
+        env: OFFLINE_MODEL_NAME
+        example: "base"
+      - name: WHISPER_DEVICE
+        env: WHISPER_DEVICE
+        example: "auto"
+    metadata:
+      category: productivity
+      tags: [transcription, video, whisper, ai, youtube]
+      license: MIT
+      owner: local

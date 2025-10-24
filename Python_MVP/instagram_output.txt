@@ -1,0 +1,6 @@
+Using offline mode with model 'base' on device 'auto'
+Loaded Whisper model 'base' on cpu
+Converting video to text: https://www.instagram.com/reel/DOtdzTMDs1U/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+Mode: Offline (model: base, device: auto)
+Note: Model will be downloaded on first use if not already cached
+  Starting video download...
